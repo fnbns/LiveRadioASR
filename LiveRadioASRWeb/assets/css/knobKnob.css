@@ -1,0 +1,27 @@
+/*----------------------------
+	knobKnob Styles
+-----------------------------*/
+
+
+.knob{
+	width:83px;
+	height:83px;
+	position:relative;
+
+	margin-top: 15px;
+	left:907px;
+}
+
+.knob .top{
+	
+	width:83px;
+	height:83px;
+	background:url('../images/volume.png') no-repeat;
+	
+	
+}
+.knob [draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

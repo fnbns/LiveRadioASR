@@ -1,0 +1,271 @@
+<html ng-app='RadioPlayer'>
+<head>
+	<title>RadioPlayerMultimedia</title>
+	<link rel="stylesheet" href ="/bootstrap-3.2-2.0-dist/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href ="/css/style.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300|Jura:300' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+	
+	
+	<script src="/js/app.js"> </script>
+	<script src="/js/radioController.js" ></script>
+</head>
+<body ng-controller='RadioController'>
+	
+	<div class="jumbotron" >
+		
+		<div class="container">
+				<!-- Static navbar -->
+      		<div class="navbar navbar-default" role="navigation">
+        		<div class="container-fluid">
+          			<div class="navbar-header">
+           			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-navbar-collapse">
+              		<span class="sr-only">Toggle navigation</span>
+              		<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+            	</button>
+            <a class="navbar-brand" href="/demo">RadioLogo</a>
+          </div>
+          <div id="example-navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="/multimedia">Home</a></li>
+              <li><a href="#intro">Intro</a></li>
+              <li><a href="#backend">Backend</a></li>
+              <li><a href="#server">Server</a></li>
+              <li><a href="#frontend">Frontend</a></li>
+              <li><a href="/demo">Demo</a></li>
+            </ul>
+          </div><!--end nav-collapse -->
+        </div><!--end container-fluid -->
+      	</div>
+			<div class="row">
+  				  <div class="infoText text-center">
+      					<h1>Radio News Transcriber System</h1>
+      					<h2>student: Alexandru Constantin Serban, 442A</h2>
+						<h2>coordinator: Horia Cucu</h2>
+						<br/>
+						<a href="#" class="btn btn-primary jumbotronButton">View More</a>
+			</div><!-- infoText inner -->
+	  	</div>
+      
+
+      	<br><br><br>
+	</div><!-- end container -->
+	</div> <!-- end jumbotron -->
+
+	<div id="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="objectives">
+						<div class="infoIcon icon-objectives">
+							<h2 >Objectives</h2>
+						</div>
+						
+						<p>The main Goal of this project was to design and implement a scalable system capable of transcribing radio input streams into text & present transcription results using HTTP client-server model .</p>
+						<!-- <a href="#" class="btn btn-info">Read More</a> -->
+						<!--<a href="#objectivesPanel" ng-click="detailsPanel = 1">Read More</a>-->
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="why">
+						<div class="infoIcon icon-why">
+							<h2>Why?</h2>
+						</div>
+						
+						<p>Combining Audio Signal Processing in order to translate it into text and Client-Server architecture, this project is meant to achieve a balance between my first period of studies which included signal processing & the second part based on software development .</p>
+						<!-- <a href="#" class="btn btn-info">Read More</a> -->
+						<!--<a href="#whyPanel" ng-click="detailsPanel = 2">Read More</a>-->
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="contributions">
+						<div class="infoIcon icon-contributions">
+							<h2>Contributions</h2>
+						</div>
+						
+						<p>Using given Acoustic & Phonetic models, my main task was to design and implement a Sphinx4 based trascription system that can aquire input streams from different radio stations, decode them & show the results to a web client through HTTP. This task included designing a web GUI .</p>
+						<!-- <a href="#" class="btn btn-info">Read More</a> -->
+						<!--<a href="#contributionsPanel" ng-click="detailsPanel = 3" >Read More</a>-->
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div><!-- end intro  -->
+	
+
+	<div id="objectivesPanel" ng-show="detailsPanel === 1">Objectives</div>
+	<div id="whyPanel" ng-show="detailsPanel === 2">Why?</div>
+	<div id="contributionsPanel" ng-show="detailsPanel === 3">Contributions</div>
+	
+
+	<div id="milestones">
+		<div class="container">
+			<div class="row">
+
+				<span class="milestones icon-milestonesHeader">
+					<h1 >Milestones</h1>
+				</span>
+
+				<span class="milestones icon-milestones">
+					<h5>Getting Started with Sphinx4 Speech Recognition System by building a speech recognition speech recognition speaker independent system & a digits recognizing system (results presented in documentation)</h5>
+				</span>
+					
+				<span class="milestones icon-milestones">
+					<h5>Implemented a Sphinx 4 architecture component for aquiring radio streams as input </h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Implemented a Sphinx 4 architecture component for writing .wav files on disk (30s chunks) .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Designed and implemented Java server side architecture (clients can connect through sockets or HTTP Protocol) .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Implemented Diarization (audio data that doesn’t contain speech is removed before being passed to the recognition system) .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Designed & Implemented JavaScript Client (GUI Design and Radio player) .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Designed and implemented Node.JS Server architecture .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Implemented Authentification feature using MondoDB Database and social media frameworks .</h5>
+				</span>
+				
+				<span class="milestones icon-milestones">
+					<h5>Designed and implemented a pres. website .</h5>
+				</span>
+			
+			</div>
+		</div>
+	</div><!-- end milesteones -->
+
+	<div id="backend">
+		<div class="container">
+			<div class="row">
+				<span class="backend icon-backendLogo">
+					<h1 class="text-center">Backend</h1>
+				</span>
+				
+				<p> Backend architecture consists from a stable Sphinx 4 based speech recognition system & a Java Glassfish Web Server . The common 		way to recognize speech is the following: we take a waveform, split it on utterances by silences then 	try to recognize what's being said in each utterance. To do that we want to take all possible 			combinations of words and try to match them with the audio. We choose the best matching combination.	There are few important things in this match.
+					<br /><br />
+					First of all it's the concept of features. Since the number of parameters is large, we should try to optimize it. Params are numbers that are calculated from speech usually by dividing speech on frames. Then for each frame of length typically 10 milliseconds we extract 39 numbers that represent the speech. That's called feature vector. 
+					Second it's a concept of the model. Model describes some mathematical object that gathers common attributes of the spoken word. In practice, for audio model of senone is gaussian mixture of it's three states - to put it simple, it's a most probable feature vector. 
+					<br /><br />
+					The model of speech is called Hidden Markov Model or HMM, it's a generic model that describes black-box communication channel. In this model process is described as a sequence of states which change each other with certain probability. This model is intended to describe any sequential process like speech. It has been proven to be really practical for speech decoding.
+					Third, it's a matching process itself. Since it would take a huge time more than universe existed to compare all feature vectors with all models, the search is often optimized by many tricks. At any points we maintain best matching variants and extend them as time goes producing best matching variants for the next frame.
+					<br /><br />
+					What else ? We store the radio transmision into time stamped wav files in order to check & correct the transcription.
+					<br /><br />
+					We also provide a Glassfish http server capable of dealing with web-clients requests.
+					<br /><br />
+					How does it work ? Whenever you send a request (e.g. 'I want the transcription for RRA') we send you via http the available transcription for the current day & constant updates as they are decoded by the system. Usually, they come with a delay of 10s :( .
+
+				</p>
+			</div>
+		</div>
+	</div><!-- end backend -->
+	
+	<div id="server">
+		<div class="container">
+			<div class="row">
+				
+				<div class="pull-right">
+				<span class="server icon-nodeLogo">&nbsp;</span>
+				<span class="server icon-mongoLogo">&nbsp;</span>
+				<span class="server icon-serverLogo">&nbsp;</span>
+			</div>
+				<p> Server-side architecture includes the Java Glassfish server presented above which delivers transcriptions & a NodeJS server which provides a full Auth feature & deals with internal routing. 
+
+				<br /><br />
+
+				Why Node? NodeJS was more or less a case-study, authentication request could be resolved by the Java Glassfish server too, but because this project is meant to be a web service we wanted to use the latest available technologies. By using NodeJS we could easy adapt to social media environments providing different log-in alternatives. Node is a modular system; we used PassportJS & Bcrypt for authentication request (PassportJS provides the OAuth feature while Bcrypt takes care that your credentials are securily passed through http). For internal routing we used the well known ExpressJS & for Object-relational mapping MongooseJS. 
+				
+				<br /><br />
+
+				There was no need for a relational db so we prefered MongoDB, an easy to use NoSQL DB.
+
+				<br /><br />
+				Some words about the data flow : Once you enter the URL in your browser you make a http GET request to the Node server which checks either you're logged in or not (we use sessions that expire once you close any page related to the project, or your borwser). In case you're logged in, you're redirected to the index (current) page. If not, you're going straight to the Auth feature desribed above. Once you enter your credentials (or choose a social media framework) Passport module comes in an handles your request by connecting to the database and checking your data. If everything goes well, you're welcomed to our index page. If not, you get a second chance to authenticate :) . 
+				<br /><br />
+
+				Demo : If you want less words and more action, you're welcomed in the 2nd layer of the project. Demo provides access to 4 radio stations (the system is only able to transcribe romanian radios). When you select your desired radio station, you make a http request to the Glassfish server which in return gives you access to the available transcription & keeps you notified with future updates.				
+				<br /> If you get bored, you can try another radio. By that, you're making another request to the server & the wheel spins again.
+
+				<br /><br />
+				Full features : The system can be adapted to a large number of radios only by configuring the ID (name) & the URL in a simple list . Since this is only a demo, 4 radios have been chosen.
+				<br /><br />
+				Ideas for scalability : The system can also be adapted in order to receive an URL input from the user and start transcribing the desired radio. Unfortunately, we did not covered this part :( .</p>
+			</div>
+		</div>
+	</div><!-- end server -->
+	
+	<div id="frontend">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+				<a href="/demo"><span class="frontend icon-frontendLogo">&nbsp;</span></a>
+				</div>
+				<div class="col-md-4">
+					<h1 class="text-center">FrontEnd</h1>	
+				</div>
+				<div class="col-md-4">
+					<a href="/demo" class="btn btn-primary info ">Demo</a>
+				</div>
+			</div>
+
+			<div class="row text-center">	
+				<p> The Front End Component is basicly a GUI developed in web technologies (HTML5, CSS3, BootStrap, JavaScript,  JQuery ). </p>
+			</div>
+			</div>
+		</div>
+	</div><!-- end frontend -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="footer links">
+						<li><a href="#intro">Intro</a></li>
+              			<li><a href="#backend">Backend</a></li>
+              			<li><a href="#server">Server</a></li>
+              			<li><a href="#frontend">Frontend</a></li>
+              			<li><a href="/demo">Demo</a></li>
+              			<li><a href="/logout">Logout</a></li>
+
+					</ul>
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<a href="http://ro.linkedin.com/pub/serban-alexandru-constantin/33/8a0/736" ><span class="linkedin-icon">&nbsp;</span></a>
+					<a href="https://plus.google.com/u/0/113580030769532865651/posts" ><span class="google-icon">&nbsp;</span></a>
+					<a href="#" ><span class="drible-icon">&nbsp;</span></a>
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<a href="http://speed.pub.ro" ><span class="speed-logo">&nbsp;</span></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="copyright">
+			<small c>&copy;<a href="#" ></a>Copyright 2014 Alexandru Constantin Serban- Universitatea Politehnica Bucuresti 	- All Rights Reserved</small>
+		</div>
+	</div><!-- end footer -->
+
+	
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src ="/bootstrap-3.2-2.0-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

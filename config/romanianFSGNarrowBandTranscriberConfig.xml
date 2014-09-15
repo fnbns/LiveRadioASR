@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--    Sphinx-4 Configuration file--> 
+
+<config>
+	<property name="recognizer" value="romanianFSGNarrowBandTranscriber"/>
+	<property name="frontend" value="audioStreamFrontEnd"/>
+	<property name="logLevel" value="INFO"/>
+
+
+<!--#######################-->
+<!-- RECOGNIZERS           -->
+<!--#######################-->
+	<component name="romanianFSGNarrowBandTranscriber" type="edu.cmu.sphinx.recognizer.Recognizer">
+		<property name="decoder" value="FSGDecoder"/>
+		<propertylist name="monitors">
+			<item>speedTracker</item>
+		</propertylist>
+	</component>
+		<component name="FSGDecoder" type="edu.cmu.sphinx.decoder.Decoder">
+			<property name="searchManager" value="FSGSearchManager"/>
+		</component>
+
+<!--#######################-->
+<!-- SEARCH MANAGERS 	   -->
+<!--#######################-->
+<!-- ********** The Romanian FSG Recognizer's Search Manager components ********** -->
+	<component name="FSGSearchManager" type="edu.cmu.sphinx.decoder.search.SimpleBreadthFirstSearchManager">
+		<property name="logMath" value="logMath"/> 								<!-- shared component -->
+		<property name="linguist" value="flatLinguist"/>
+		<property name="pruner" value="trivialPruner"/> 							<!-- shared component -->
+		<property name="scorer" value="threadedScorer"/> 							<!-- shared component -->
+		<property name="activeListFactory" value="activeListFactory"/>
+	</component>
+
+		<component name="activeListFactory" type="edu.cmu.sphinx.decoder.search.PartitionActiveListFactory">
+			<property name="logMath" value="logMath"/>
+			<property name="absoluteBeamWidth" value="-1"/>
+			<property name="relativeBeamWidth" value="1E-70"/>
+		</component>
+    
+		<component name="flatLinguist" type="edu.cmu.sphinx.linguist.flat.FlatLinguist">
+			<property name="logMath" value="logMath"/> 							<!-- shared component -->
+			<property name="grammar" value="FSG"/>
+			<property name="acousticModel" value="multiSpeakerNarrowbandAcousticModel"/> 				<!-- shared component -->
+			<property name="wordInsertionProbability" value="1E-10"/>
+			<property name="languageWeight" value="2"/>
+			<property name="unitManager" value="unitManager"/> 						<!-- shared component -->
+			<!-- ADDED these 4 properties for detecting and ignoring out-of-grammar utterances -->
+			<property name="addOutOfGrammarBranch" value="true"/>
+			<property name="outOfGrammarProbability" value="1E-10"/>
+			<property name="phoneInsertionProbability" value="1E-10"/>
+			<property name="phoneLoopAcousticModel" value="multiSpeakerNarrowbandAcousticModel"/>
+		</component>
+        
+		<component name="FSG" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
+			<property name="dictionary" value="dictionary"/> 						<!-- shared component -->
+			<property name="grammarLocation" value="./models/grammar/"/>
+			<property name="grammarName" value="surnames"/>
+			<property name="logMath" value="logMath"/>                                                      <!-- shared component -->
+                        <property name="addSilenceWords" value="true"/>
+			<property name="addFillerWords" value="true"/>
+		</component>
+    
+	<component name="multiSpeakerNarrowbandAcousticModel" type="edu.cmu.sphinx.linguist.acoustic.tiedstate.TiedStateAcousticModel">
+		<property name="unitManager" value="unitManager"/>
+		<property name="loader" value="sphinx3Loader"/>
+	</component>
+
+		<component name="sphinx3Loader" type="edu.cmu.sphinx.linguist.acoustic.tiedstate.Sphinx3Loader">
+			<property name="unitManager" value="unitManager"/>
+			<property name="location" value="./models/acoustic/phoneRecognition8kHz.cd_cont_2000_64"/>
+			<property name="logMath" value="logMath"/>
+		</component>
+
+	<component name="dictionary" type="edu.cmu.sphinx.linguist.dictionary.FastDictionary">
+		<property name="unitManager" value="unitManager"/>
+		<property name="dictionaryPath" value="./models/phonetic/europarl9amHotnews10k.augmented.dic.full.plus.romanianCities.dic.plus.dates.dic.plus.names.dic.plus.numbers.dic"/>
+		<property name="fillerPath" value="./models/phonetic/fillerDictionary.dic"/>
+		<property name="addSilEndingPronunciation" value="false"/>
+		<property name="allowMissingWords" value="false"/>
+	</component>
+
+	<component name="trivialPruner" type="edu.cmu.sphinx.decoder.pruner.SimplePruner">
+	</component>
+
+	<component name="threadedScorer" type="edu.cmu.sphinx.decoder.scorer.ThreadedAcousticScorer">
+		<property name="frontend" value="${frontend}"/>
+	</component>
+
+	<component name="unitManager" type="edu.cmu.sphinx.linguist.acoustic.UnitManager">
+	</component>
+
+	<component name="logMath" type="edu.cmu.sphinx.util.LogMath">
+		<property name="useAddTable" value="true"/>
+		<property name="logBase" value="1.0001"/>
+	</component>
+
+
+<!--#######################-->
+<!-- MONITORS              -->
+<!--#######################-->
+	<component name="speedTracker" type="edu.cmu.sphinx.instrumentation.SpeedTracker">
+		<property name="recognizer" value="${recognizer}"/>
+		<property name="showTimers" value="false"/>
+		<property name="frontend" value="${frontend}"/>
+	</component>
+
+<!--#######################-->
+<!-- FRONT ENDS            -->
+<!--#######################-->
+	<component name="audioFileFrontEnd" type="edu.cmu.sphinx.frontend.FrontEnd">
+		<propertylist name="pipeline">
+			<item>audioFileDataSource</item>
+			<item>preemphasizer</item>
+			<item>windower</item>
+			<item>fft</item>
+			<item>melFilterBank</item>
+			<item>dct</item>
+			<item>batchCMN</item>
+			<item>featureExtraction</item>
+		</propertylist>
+	</component>
+
+	<component name="audioStreamFrontEnd" type="edu.cmu.sphinx.frontend.FrontEnd">
+		<propertylist name="pipeline">
+			<item>audioStreamDataSource</item>
+			<item>preemphasizer</item>
+			<item>windower</item>
+			<item>fft</item>
+			<item>melFilterBank</item>
+			<item>dct</item>
+			<item>batchCMN</item>
+			<item>featureExtraction</item>
+		</propertylist>
+	</component>
+		<component name="audioFileDataSource" type="edu.cmu.sphinx.frontend.util.AudioFileDataSource">
+		</component>
+                <component name="audioStreamDataSource" type="org.etti.sphinx.frontend.util.AudioStreamDataSource">
+                    <property name="sampleRate" value="8000"/>
+		</component>
+		<component name="preemphasizer" type="edu.cmu.sphinx.frontend.filter.Preemphasizer">
+		</component>
+		<component name="windower" type="edu.cmu.sphinx.frontend.window.RaisedCosineWindower">
+		</component>
+		<component name="fft" type="edu.cmu.sphinx.frontend.transform.DiscreteFourierTransform">
+		</component>
+		<component name="melFilterBank" type="edu.cmu.sphinx.frontend.frequencywarp.MelFrequencyFilterBank">
+                    <property name="numberFilters" value="31"/>
+                    <property name="minimumFrequency" value="200"/>
+                    <property name="maximumFrequency" value="3500"/>
+		</component>
+		<component name="dct" type="edu.cmu.sphinx.frontend.transform.DiscreteCosineTransform">
+		</component>
+		<component name="batchCMN" type="edu.cmu.sphinx.frontend.feature.BatchCMN">
+		</component>
+		<component name="featureExtraction" type="edu.cmu.sphinx.frontend.feature.DeltasFeatureExtractor">
+		</component>
+
+	<!-- UNUSED -->
+		<component name="microphone" type="edu.cmu.sphinx.frontend.util.Microphone">
+			<property name="closeBetweenUtterances" value="false"/>
+		</component>
+		<component name="liveCMN" type="edu.cmu.sphinx.frontend.feature.LiveCMN">
+		</component>
+		<component name="streamDataSource" type="edu.cmu.sphinx.frontend.util.StreamDataSource">
+			<property name="bigEndianData" value="false"/>
+		</component>
+		<component name="speechMarker" type="edu.cmu.sphinx.frontend.endpoint.SpeechMarker">
+		</component>
+		<component name="speechClassifier" type="edu.cmu.sphinx.frontend.endpoint.SpeechClassifier">
+		</component>
+		<component name="nonSpeechDataFilter" type="edu.cmu.sphinx.frontend.endpoint.NonSpeechDataFilter">
+		</component>
+		<component name="dataBlocker" type="edu.cmu.sphinx.frontend.DataBlocker">
+		</component>
+		<component name="wavWriter" type="edu.cmu.sphinx.frontend.util.WavWriter">
+			<property name="captureUtterances" value="true"/>
+		</component>
+
+
+</config>

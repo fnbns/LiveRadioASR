@@ -1,0 +1,592 @@
+@charset "UTF-8";
+/* CSS Document */
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Josefin Slab', serif;
+}
+
+a{
+	color: ec6d6a;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Jura', serif;
+	font-weight: 100;
+}
+
+.jumbotron{
+	padding: 0;
+	background: url(../images/backgroudRadioPlayer.png) no-repeat 50% top;
+	margin: 0;
+
+}
+.logJumbotron{
+	padding-top: 200px;
+	background: url(../images/backgroudRadioPlayer.png) no-repeat 50% top;
+	margin: 0;
+}
+.logJumbotron h1{
+	font-size: 72px;
+	font-weight: 100;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+.logJumbotron p{
+	font-family: 'Josefin Slab', serif;
+	font-size: 25px;
+	font-weight: 100;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+.navbar-default {
+	padding: 40px 0;
+	margin-top :30px;
+	background: transparent;
+	border: none;
+	
+}
+.navbar-brand{
+	text-indent: -9999px;
+	height: 70;
+	width: 80;
+	background: url(../images/radioPlayerLogo.png) no-repeat;
+}
+.navbar-nav > li{
+	padding-top: 40px;
+}
+.navbar-default .navbar-nav > li > a{
+	font-size: 18px;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 100;
+	color: white;
+	text-shadow: none;
+	padding : 10px 20px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	color: white;
+	/*box-shadow: none;
+	background: rgba(0,0,0,0.7);
+	-webkit-border-radius :5px;
+	moz-border-radius :5px;
+	border-radius: 5px; */
+	background: none;
+	text-decoration: underline;
+}
+/* end navbar */
+
+
+/* jumbotron text begin */
+.infoText h1{
+	padding: 40px;
+	font-size: 72px;
+	font-weight: 100;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+.infoText h2{
+	font-size: 30px;
+	font-weight: 100;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+/* jumbotron text end */
+
+/* jumbotron a button begin */
+a.btn.btn-primary.jumbotronButton{
+	font-family: 'Josefin Slab', serif;
+	font-weight: 100;
+	margin-top: 40px;
+	border-radius: 0;
+	padding: 10px;
+}
+/* jumbotron a button end */
+
+/* intro section begin */
+#intro{
+	padding: 120px 0;
+	padding-bottom: 120px;
+
+}
+.infoIcon.icon-objectives {
+
+	display: inline-block;
+	width: 44;
+	height: 48;
+	background: transparent url(../images/objectivesLogo.png) no-repeat;
+	background-position: left top;
+	padding-left: 110px;
+	padding-bottom: 100px;
+}
+
+.infoIcon.icon-why {
+	
+	width: 44;
+	height: 48;
+	background: transparent url(../images/whyIcon.png) no-repeat;
+	background-position: left top;
+	padding-left: 120px;
+	padding-bottom: 78px;
+}
+.infoIcon.icon-contributions {
+	display: inline-block;
+	width: 28;
+	height: 48;
+	background: transparent url(../images/contributionsIcon.png) no-repeat;
+	background-position: left top;
+	padding-left: 100px;
+	padding-bottom: 100px;
+}
+.objectives p {
+	font-size: 18px;
+	font-family: 'Jura';
+}
+.why p {
+	font-size: 18px;
+	font-family: 'Jura';
+}
+.contributions p {
+	font-size: 18px;
+	font-family: 'Jura';
+}
+/* intro section end */
+
+/* milestones section begin */
+#milestones{
+	background-color: e5e5e5;
+	padding-top: 60px;
+	padding-bottom: 120px;
+	
+
+}
+.milestones.icon-milestonesHeader{
+	color: 288c70;
+	display: block;
+	height: 48;
+	background: transparent url(../images/MilestonesIcon.png) no-repeat;
+	padding-left: 40px;
+	padding-top: 1px;
+	padding-bottom: 80px;
+	margin-left: 500px;
+}
+
+.milestones.icon-milestones{
+	color: 288c70;
+	display: block;
+	height: 48;
+	background: transparent url(../images/milestonessIcon.png) no-repeat;
+	padding-left: 40px;
+	
+}
+.milestones.icon-milestones h5{
+	font-size: 18px;
+}
+
+/* milestones section end */
+
+
+/* backend section begin */
+#backend{
+	background-color: e8504d;
+	padding: 60px 0;
+	padding-bottom: 120px;
+}
+#backend p{
+	color: white;
+	font-family: 'Jura';
+	font-size: 16px;
+	font-weight: 100;
+}
+.backend.icon-backendLogo{
+	display: block;
+	width: 100;
+	height: 56;
+	background: transparent url(../images/backEndIcon.png) no-repeat;
+	padding-left: 520px;
+	padding-bottom: 120px;
+	padding-top: 1px;
+}
+
+.backend.icon-backendLogo h1{
+	color: white;
+
+}
+/* backend section end */
+
+/*server section begin*/
+#server{
+	background-color: 288c70;
+	color: white;
+	font-family: 'Jura';
+	font-size: 16px;
+	font-weight: 100;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}	
+.server.icon-nodeLogo{
+	display: inline-block;
+	height: 100px;
+	width: 300px;
+	background: url(../images/nodeJsLogo.png) no-repeat;
+	padding-right: 100px;
+}
+.server.icon-mongoLogo{
+	display: inline-block;
+	height: 100px;
+	width: 300px;
+	background: url(../images/mongoDbLogo.png) no-repeat;
+	padding-right: 100px;
+}
+.server.icon-serverLogo{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background: url(../images/serverIcon.png) no-repeat;
+}
+/*server section end */
+
+/* frontend section start */
+#frontend{
+	background-color: f8ca70;
+	color: 505050;
+	font-family: 'Jura';
+	font-size: 16px;
+	font-weight: 100;
+	padding-top: 60px;
+	padding-bottom: 120px;
+}
+.frontend.icon-frontendLogo{
+	display: inline-block;
+	background: url(../images/FrontEndIcon.png) no-repeat;
+	width: 100px;
+	height: 100px;
+	
+}
+.btn.btn-primary.info {
+	margin-top: 60px;
+	margin-left: 170px;
+	
+	background-color: 288c70;
+}
+/* frontend section end */
+
+
+
+/* footer section begin */
+
+#footer{
+	background-color: 2f2f2f;
+	padding-top: 60px;
+	
+	color: 505050;
+	font-family: 'Jura';
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.footer.links{
+	list-style: none;
+}
+.footer.links a{
+	color: 505050;
+}
+
+.linkedin-icon{
+	display: inline-block;
+	height: 64px;
+	background: url(../images/linkedInIcon.png) no-repeat;
+	padding-left: 64px;
+}
+.google-icon{
+	display: inline-block;
+	height: 64px;
+	background: url(../images/google+Icon.png) no-repeat;	
+	padding-left: 64px;
+}
+.drible-icon{
+	display: inline-block;
+	height: 64px;
+	background: url(../images/Github-icon.png) no-repeat;	
+	padding-left: 64px;
+}
+.speed-logo{
+	display: inline-block;
+	width: 250px;
+	height: 100px;
+	background: url(../images/speedLogo.png) no-repeat;	
+	padding-left: 64px;
+
+}
+.copyright{
+	text-align: center;
+	padding: 50px;
+}
+
+/* footer section end */
+
+
+
+.btn-primary {
+	background: black;
+	border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
+	background:grey;
+	color: white;
+}
+
+a.btn.btn-primary.linkedin{
+
+	color: #fff;
+	background-color: #007bb6;
+	border-color: #285e8e;
+	}
+	a.btn.btn-primary.facebook{
+	color: #fff;
+	background-color: #3b5998;
+	border-color: #285e8e;
+	}
+	a.btn.btn-primary.google{
+	color: #fff;
+	background-color: #dd4b39;
+	border-color: #285e8e;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#playerBackground {
+	
+	/*margin-left : 
+	  margin-right:
+	  margin-botton:
+	  */
+	
+}
+#playerBackground img {
+	height: 250px;
+	width: 791px;
+	position:absolute;
+	margin-top:-5px;
+	left:240px;
+}
+#buttonsBar {
+	list-style: none;
+}
+#buttonsBar img {
+	height: 95px;
+	width: 179px;
+	
+}
+#RRA-Button {
+    background:url(../images/RRAButton.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:263px;
+
+}
+#RRA-Button:hover {
+ 	background:url(../images/RRAButtonHoover.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:263px;
+}
+#RRI-Button {
+ 	background:url(../images/RRIButton.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:452px;
+}
+#RRI-Button:hover {
+ 	background:url(../images/RRIButtonHover.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:452px;
+}
+#RRC-Button {
+	background:url(../images/RRCButton.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:641px;
+
+}
+#RRC-Button:hover {
+	background:url(../images/RRCButtonHover.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:641px;
+
+}
+#RC-Button {
+	background:url(../images/RCButton.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:830px;
+}
+#RC-Button:hover {
+	background:url(../images/RCButtonHover.png);
+	background-size:179px 95px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+    width:179px;
+    height:95px;
+	position:absolute;
+	top: 345px;
+	left:830px;
+}
+
+#stopButton{
+	background:url(../images/StopButtonHover.png);
+	background-size:60px 61px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+  	height: 61px;
+	width: 60px;
+	position:absolute;
+	top:232px;
+	left:275px;
+	
+}
+#stopButton:hover{
+	background:url(../images/StopButton.png);
+	background-size:60px 61px ;
+	background-repeat:no-repeat;
+    cursor:pointer;
+    border:none;
+  	height: 61px;
+	width: 60px;
+	position:absolute;
+	top:232px;
+	left:275px;
+	
+}
+#stopText img {
+	height: 15px;
+	width: 48px;
+	position:absolute;
+	top:297px;
+	left:282px;
+}
+#volumeStatic img{
+	height: 74px;
+	width: 71px;
+	position:absolute;
+	top:234px;
+	left:928px;
+}
+#volumeDinamic img{
+	height: 78px;
+	width: 75px;
+	position:absolute;
+	top:234px;
+	left:927px;
+}
+#eqText img {
+	height: 10px;
+	width: 250px;
+	position:absolute;
+	top:230px;
+	left:515px;
+}
+#textBox img {
+	height: 357px;
+	width: 708px;
+	position:absolute;
+	top:455px;
+	left:280px;
+}
+#transcriptionBox {
+	color: black;
+	background-color: transparent;
+	border: transparent;
+	height: 327px;
+	width: 678px;
+	position:absolute;
+	top:468px;
+	left:293px;
+}
+.bar {
+    background: -webkit-linear-gradient(#339999, #33FFCC) ;
+	opacity:0.4;
+	box-shadow: 5px 5px 5px #000000;
+    width:7px;
+    height:15px;
+    display: inline-block;
+	vertical-align:top;
+}
+#eqBars {
+	position:absolute;
+	top:245px;
+	left:515px;
+}
+
+#test {
+	background-image:url(../../air-touch-menu_0002_Gallery.png);
+	width: 100px;
+	height: 100px;	
+}

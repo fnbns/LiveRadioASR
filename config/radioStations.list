@@ -1,0 +1,42 @@
+radioStations= RRA RRC RRI RCT
+
+#VLC
+VLC.fullName = TestStream
+VLC.URL = http://192.168.192.61:1123
+VLC.logoPath = src\\org\\etti\\speech\\liveradioasr\\client\\images\\RRA.gif
+VLC.shortName = TEST 
+VLC.transcriptionFileNameTemplate = VLC -<DATE>.transcription
+
+# RRA
+RRA.fullName = 	Radio Romania Actualitati
+RRA.URL = http://89.238.227.6:8000
+RRA.logoPath = src\\org\\etti\\speech\\liveradioasr\\client\\images\\RRA.gif
+RRA.shortName = RRA
+RRA.transcriptionFileNameTemplate = RRA-<DATE>.transcription
+
+
+# RRC
+RRC.fullName = Radio Romania Cultural 
+RRC.URL = http://stream2.srr.ro:8010
+RRC.logoPath = src\\org\\etti\\speech\\liveradioasr\\client\\images\\RRC.gif
+RRC.shortName = RRC
+RRC.transcriptionFileNameTemplate = RRC-<DATE>.transcription
+
+# RRI
+RRI.fullName = Radio Romania International
+RRI.URL = http://stream2.srr.ro:8052
+RRI.logoPath =  src\\org\\etti\\speech\\liveradioasr\\client\\images\\RRI.gif
+RRI.shortName = RRI
+RRI.transcriptionFileNameTemplate = RRI-<DATE>.transcription
+
+# RCT
+RCT.fullName = Radio Constanta
+RCT.URL = http://89.238.227.6:8336/
+RCT.logoPath = src\\org\\etti\\speech\\liveradioasr\\client\\images\\RConstanta.gif
+RCT.shortName = RCT
+RCT.transcriptionFileNameTemplate = RCT-<DATE>.transcription
+
+
+
+
+

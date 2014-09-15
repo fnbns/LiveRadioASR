@@ -1,0 +1,67 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Radio Player</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<link rel="stylesheet" href="/css/style.css">
+	<style > body{
+	background-color: #288c70;
+	
+	}
+	#footer{
+	background-color: #2f2f2f;
+	padding-top: 60px;
+	color: #505050;
+	font-family: 'Jura';
+	font-size: 16px;
+	font-weight: 100;
+	}
+	
+
+	</style>
+</head>
+<body>
+
+
+	<div class="jumbotron text-center logJumbotron">
+	<div class="container">
+		<h1><span class="fa fa-lock"></span> Live Radio ASR</h1>
+
+		<p>Login or Register with:</p>
+
+		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+		<a href="/auth/linkedin" class="btn btn-primary linkedin"><span class="fa fa-linkedin"></span> LinkedIn</a> 
+		<a href="/auth/google" class="btn btn-primary google"><span class="fa fa-google-plus"></span> Google</a>
+		<a href="/auth/facebook" class="btn btn-primary facebook"><span class="fa fa-facebook"></span> Facebook</a>
+		
+	</div>
+	<br><br><br><br><br><br>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<a href="http://ro.linkedin.com/pub/serban-alexandru-constantin/33/8a0/736" ><span class="linkedin-icon">&nbsp;</span></a>
+					<a href="https://plus.google.com/u/0/113580030769532865651/posts" ><span class="google-icon">&nbsp;</span></a>
+					<a href="#" ><span class="drible-icon">&nbsp;</span></a>
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<a href="http://speed.pub.ro" ><span class="speed-logo">&nbsp;</span></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="copyright">
+			<small c>&copy;<a href="#" ></a>Copyright 2014 Alexandru Constantin Serban- Universitatea Politehnica Bucuresti 	- All Rights Reserved</small>
+		</div>
+	</div><!-- end footer -->
+</div>
+</body>
+</html>

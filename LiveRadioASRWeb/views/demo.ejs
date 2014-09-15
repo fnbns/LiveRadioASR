@@ -1,0 +1,157 @@
+<html>
+<head>
+	<title>RadioPlayerMultimedia</title>
+	<link rel="stylesheet" href ="/bootstrap-3.2-2.0-dist/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href ="/css/style.css" type="text/css">
+	<link rel="stylesheet" href="/css/knobKnob.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300|Jura:300' rel='stylesheet' type='text/css'>
+	<script language="javascript" type="text/javascript" src="/js/equalizer.js"></script>
+<style > body{
+	background-color: 288c70;
+	
+	}</style>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+				<!-- Static navbar -->
+      		<div class="navbar navbar-default" role="navigation">
+        		<div class="container-fluid">
+          			<div class="navbar-header">
+           			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              		<span class="sr-only">Toggle navigation</span>
+              		<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+            	</button>
+            <a class="navbar-brand" href="/multimedia">RadioLogo</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/multimedia">Home</a></li>
+              <li><a href="/multimedia#intro">Intro</a></li>
+              <li><a href="/multimedia#backend">Backend</a></li>
+              <li><a href="/multimedia#server">Server</a></li>
+              <li><a href="/multimedia#frontend">Frontend</a></li>
+              <li class="active"><a href="#">Demo</a></li>
+            </ul>
+          </div><!--end nav-collapse -->
+        </div><!--end container-fluid -->
+      	</div>
+	</div> <!-- end jumbotron -->
+      
+
+      		 <div id="playerBackground">
+	 		<img src="/images/PlayerBackground.png" /> 	
+     		</div>
+  		<ul id="buttonsBar">
+ 	
+     <li><input type="button" id="RRA-Button" onclick="radioPlay1('RRA')"/></li>
+     <li><input type="button" id="RRI-Button" onclick="radioPlay1('RRI')"/></li>
+     <li><input type="button" id="RRC-Button" onclick="radioPlay1('RRC')"/></li>
+     <li><input type="button" id="RC-Button" onclick="radioPlay1('RC')"/></li>
+     <li><input type="button" id="stopButton" onclick="radioStop()"/></li>
+     <li>
+     </ul>
+ 
+     <div id="stopText">
+        <img src="/images/StopText.png"/>
+     </div>	
+   	
+   
+     
+     <div id="equalizer">
+     	<div id="eqText">
+        <img src="/images/EqText.png"  />
+        </div>
+        <div id="eqBars">
+        <span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+        <span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+        <span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+        <span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+        <span class="bar"></span>
+    	<span class="bar"></span>
+        <span class="bar"></span>
+    	<span class="bar"></span>
+    	<span class="bar"></span>
+        </div>
+     </div>
+     
+    <div id="textBox">
+   	  <img src="/images/textBox.png" />
+      <td><textarea id="transcriptionBox" name="outputtext"></textarea></td>
+    </div>
+<section id="main">
+            
+            <div id="bars">
+                <div id="control"></div>
+            </div>
+            
+        </section>
+	
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        
+
+        
+   </div><!-- end container -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="footer links">
+						<li><a href="/multimedia#intro">Intro</a></li>
+              			<li><a href="/multimedia#backend">Backend</a></li>
+              			<li><a href="/multimedia#server">Server</a></li>
+              			<li><a href="/multimedia#frontend">Frontend</a></li>
+              			<li><a href="/demo">Demo</a></li>
+                    <li><a href="/logout">Logout</a></li>
+
+					</ul>
+				</div>
+				
+				<div class="col-md-4 text-center">
+          <a href="http://ro.linkedin.com/pub/serban-alexandru-constantin/33/8a0/736" ><span class="linkedin-icon">&nbsp;</span></a>
+          <a href="https://plus.google.com/u/0/113580030769532865651/posts" ><span class="google-icon">&nbsp;</span></a>
+          <a href="#" ><span class="drible-icon">&nbsp;</span></a>
+        </div>
+				
+				<div class="col-md-4 text-center">
+					<a href="http://speed.pub.ro" ><span class="speed-logo">&nbsp;</span></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="copyright">
+			<small c>&copy;<a href="#" ></a>Copyright 2014 Alexandru Constantin Serban- Universitatea Politehnica Bucuresti 	- All Rights Reserved</small>
+		</div>
+	</div><!-- end footer -->
+
+
+
+	
+	
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src ="/bootstrap-3.2-2.0-dist/js/bootstrap.min.js"></script>
+<script src="/js/soundmanager2.js"></script>
+<script src="/js/knobKnob.jquery.js"></script>
+<script src="/js/transform.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/demo.js"></script>
+
+</body>
+</html>
